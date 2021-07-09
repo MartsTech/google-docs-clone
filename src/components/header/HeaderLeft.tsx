@@ -6,7 +6,7 @@ interface HeaderLeftProps {}
 const HeaderLeft: React.FC<HeaderLeftProps> = ({}) => {
   return (
     <>
-      <IconButton>
+      <IconButton rounded className="hidden md:inline-flex h-20 w-20 ">
         <Icon name="menu" size="3xl" />
       </IconButton>
       <Icon name="description" size="5xl" color="blue" />

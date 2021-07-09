@@ -2,18 +2,23 @@
 import Button from "@material-tailwind/react/Button";
 
 interface ButtonProps {
+  rounded?: boolean;
   className?: string;
 }
 
-const IconButton: React.FC<ButtonProps> = ({ children, className }) => {
+const IconButton: React.FC<ButtonProps> = ({
+  children,
+  className,
+  rounded = false,
+}) => {
   return (
     <Button
       color="gray"
       buttonType="outline"
-      rounded={true}
+      rounded={rounded}
       iconOnly={true}
       ripple="dark"
-      className={`hidden md:inline-flex h-20 w-20 border-none ${className}`}
+      className={`border-none ${className}`}
     >
       {children}
     </Button>

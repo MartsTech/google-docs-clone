@@ -1,9 +1,9 @@
-import Header from "@component/header/Header";
+import HomePage from "features/home/HomePage";
 
 const Home = () => {
   return (
     <>
-      <Header />
+      <HomePage />
     </>
   );
 };

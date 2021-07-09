@@ -4,7 +4,8 @@
     "paths": {
       "@style/*": ["styles/*"],
       "@layout/*": ["layouts/*"],
-      "@component/*": ["components/*"]
+      "@component/*": ["components/*"],
+      "@config/*": ["configs/*"]
     },
     "outDir": "build/dist",
     "module": "esnext",
@@ -38,5 +39,10 @@
     "jest",
     "src/setupTests.ts"
   ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/header/Header.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/header/Header.tsx"
+  ]
 }
