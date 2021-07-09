@@ -10,6 +10,7 @@
     "gen-env-types": "npx gen-env-types .env.local -o src/types/env.d.ts -e ."
   },
   "dependencies": {
+    "@material-tailwind/react": "0.3.4",
     "firebase": "^8.7.1",
     "next": "11.0.1",
     "react": "17.0.2",

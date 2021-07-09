@@ -1,3 +1,4 @@
+import "@material-tailwind/react/tailwind.css";
 import "@style/globals.css";
 import { AppProps } from "next/app";
 

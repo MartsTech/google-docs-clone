@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@style/*": ["styles/*"]
+      "@style/*": ["styles/*"],
+      "@layout/*": ["layouts/*"],
+      "@component/*": ["components/*"]
     },
     "outDir": "build/dist",
     "module": "esnext",
@@ -36,5 +38,5 @@
     "jest",
     "src/setupTests.ts"
   ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/header/Header.tsx"]
 }
