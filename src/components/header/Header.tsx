@@ -1,6 +1,6 @@
 import HeaderLeft from "./HeaderLeft";
-import HeaderSearch from "./HeaderSearch";
 import HeaderRight from "./HeaderRight";
+import HeaderSearch from "./HeaderSearch";
 
 interface HeaderProps {}
 

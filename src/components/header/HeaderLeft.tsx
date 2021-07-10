@@ -9,7 +9,10 @@ const HeaderLeft: React.FC<HeaderLeftProps> = () => {
       <IconButton rounded className="hidden md:inline-flex h-20 w-20 ">
         <Icon name="menu" size="3xl" />
       </IconButton>
-      <Icon name="description" size="5xl" color="blue" />
+      <div className="hidden md:inline-flex">
+        <Icon name="description" size="5xl" color="blue" />
+      </div>
+
       <h1
         className="hidden md:inline-flex ml-2 text-gray-700 
           text-2xl"

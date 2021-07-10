@@ -17,7 +17,12 @@ const LoginPage: React.FC<LoginPageProps> = () => {
         objectFit="contain"
         alt="banner"
       />
-      <Button className="w-44 mt-10" onClick={signIn}>
+      <Button
+        className="w-44 mt-10"
+        type="filled"
+        ripple="light"
+        onClick={signIn}
+      >
         Login
       </Button>
     </div>

@@ -2,11 +2,11 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@style/*": ["styles/*"],
-      "@layout/*": ["layouts/*"],
       "@component/*": ["components/*"],
       "@config/*": ["configs/*"],
-      "@feature/*": ["features/*"]
+      "@feature/*": ["features/*"],
+      "@service/*": ["services/*"],
+      "@type/*": ["types/*"]
     },
     "outDir": "build/dist",
     "module": "esnext",

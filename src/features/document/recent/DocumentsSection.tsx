@@ -1,8 +1,9 @@
 import Icon from "@component/icon/Icon";
+import RecentDocuments from "./RecentDocuments";
 
-interface RecentDocumentsSectionProps {}
+interface DocumentsSectionProps {}
 
-const RecentDocumentsSection: React.FC<RecentDocumentsSectionProps> = () => {
+const DocumentsSection: React.FC<DocumentsSectionProps> = () => {
   return (
     <section className="bg-white px-10 md:px-0">
       <div className="py-8 text-sm text-gray-700">
@@ -12,8 +13,9 @@ const RecentDocumentsSection: React.FC<RecentDocumentsSectionProps> = () => {
           <Icon name="folder" size="3xl" color="gray" />
         </div>
       </div>
+      <RecentDocuments />
     </section>
   );
 };
 
-export default RecentDocumentsSection;
+export default DocumentsSection;

@@ -8,8 +8,8 @@ interface ButtonProps {
 
 const IconButton: React.FC<ButtonProps> = ({
   children,
-  className,
   rounded = false,
+  className,
 }) => {
   return (
     <Button

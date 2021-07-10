@@ -1,18 +1,17 @@
 import Header from "@component/header/Header";
 import DefaultWrapper from "@component/wrappers/DefaultWrapper";
-import NewDocumentSection from "./NewDocumentSection";
-import RecentDocumentsSection from "./RecentDocumentsSection";
+import DocumentsSection from "@feature/document/recent/DocumentsSection";
+import StartDocumentSection from "@feature/document/start/StartDocumentSection";
 
 interface HomePageProps {}
 
-const HomePage: React.FC<HomePageProps> = ({}) => {
+const HomePage: React.FC<HomePageProps> = () => {
   return (
     <>
       <Header />
-
       <DefaultWrapper>
-        <NewDocumentSection />
-        <RecentDocumentsSection />
+        <StartDocumentSection />
+        <DocumentsSection />
       </DefaultWrapper>
     </>
   );

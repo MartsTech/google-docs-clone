@@ -19,7 +19,7 @@ const HeaderRight: React.FC<HeaderRightProps> = () => {
       {/* eslint-disable-next-line @next/next/no-img-element*/}
       <img
         loading="lazy"
-        className="hidden md:inline-flex cursor-pointer h-12 w-12 rounded-full ml-2"
+        className="cursor-pointer h-12 w-12 rounded-full ml-2"
         src={session?.user?.image || ""}
         onClick={() => signOut()}
         alt="avatar"
