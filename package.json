@@ -12,15 +12,18 @@
   "dependencies": {
     "@material-tailwind/react": "0.3.4",
     "@next-auth/firebase-adapter": "^0.1.2",
+    "draft-js": "^0.11.7",
     "firebase": "^8.7.1",
     "moment": "^2.29.1",
     "next": "11.0.1",
     "next-auth": "^3.27.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-draft-wysiwyg": "^1.14.7",
     "react-firebase-hooks": "^3.0.4"
   },
   "devDependencies": {
+    "@types/draft-js": "^0.11.4",
     "@types/react": "^17.0.14",
     "autoprefixer": "^10.2.6",
     "eslint": "7.30.0",

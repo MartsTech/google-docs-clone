@@ -21,6 +21,7 @@ const LoginPage: React.FC<LoginPageProps> = () => {
         className="w-44 mt-10"
         type="filled"
         ripple="light"
+        color="blue"
         onClick={signIn}
       >
         Login

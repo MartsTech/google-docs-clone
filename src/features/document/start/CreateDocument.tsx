@@ -38,10 +38,15 @@ const CreateDocument: React.FC<CreateDocumentProps> = ({
       }
       Footer={
         <>
-          <Button type="link" ripple="dark" onClick={close}>
+          <Button type="link" ripple="dark" color="blue" onClick={close}>
             Cancel
           </Button>
-          <Button type="filled" ripple="light" onClick={() => create()}>
+          <Button
+            type="filled"
+            ripple="light"
+            color="blue"
+            onClick={() => create()}
+          >
             Create
           </Button>
         </>
