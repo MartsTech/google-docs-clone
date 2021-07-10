@@ -2,7 +2,7 @@ import Icon from "@component/icon/Icon";
 
 interface RecentDocumentsSectionProps {}
 
-const RecentDocumentsSection: React.FC<RecentDocumentsSectionProps> = ({}) => {
+const RecentDocumentsSection: React.FC<RecentDocumentsSectionProps> = () => {
   return (
     <section className="bg-white px-10 md:px-0">
       <div className="py-8 text-sm text-gray-700">

@@ -1,9 +1,12 @@
 import Icon from "@component/icon/Icon";
 import IconButton from "@component/icon/IconButton";
+import { signOut, useSession } from "next-auth/client";
 
 interface HeaderRightProps {}
 
-const HeaderRight: React.FC<HeaderRightProps> = ({}) => {
+const HeaderRight: React.FC<HeaderRightProps> = () => {
+  const [session] = useSession();
+
   return (
     <>
       <IconButton
@@ -17,9 +20,8 @@ const HeaderRight: React.FC<HeaderRightProps> = ({}) => {
       <img
         loading="lazy"
         className="hidden md:inline-flex cursor-pointer h-12 w-12 rounded-full ml-2"
-        src={
-          "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTc5OTk2ODUyMTMxNzM0ODcy/gettyimages-1229892983-square.jpg"
-        }
+        src={session?.user?.image || ""}
+        onClick={() => signOut()}
         alt="avatar"
       />
     </>

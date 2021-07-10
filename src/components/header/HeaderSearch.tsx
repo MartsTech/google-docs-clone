@@ -2,7 +2,7 @@ import Icon from "@component/icon/Icon";
 
 interface HeaderSearchProps {}
 
-const HeaderSearch: React.FC<HeaderSearchProps> = ({}) => {
+const HeaderSearch: React.FC<HeaderSearchProps> = () => {
   return (
     <div
       className="mx-5 md:mx-20 flex flex-grow items-center px-5 py-2 

@@ -1,19 +1,19 @@
-import IsAuth from "@feature/auth/IsAuth";
-import HomePage from "@feature/home/HomePage";
+import IsNotAuth from "features/auth/IsNotAuth";
+import LoginPage from "features/auth/LoginPage";
 import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/client";
 
-interface HomeProps {}
+interface LoginProps {}
 
-const Home: React.FC<HomeProps> = () => {
+const Login: React.FC<LoginProps> = () => {
   return (
-    <IsAuth>
-      <HomePage />
-    </IsAuth>
+    <IsNotAuth>
+      <LoginPage />
+    </IsNotAuth>
   );
 };
 
-export default Home;
+export default Login;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getSession(context);

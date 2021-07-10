@@ -3,7 +3,7 @@ import IconButton from "@component/icon/IconButton";
 
 interface HeaderLeftProps {}
 
-const HeaderLeft: React.FC<HeaderLeftProps> = ({}) => {
+const HeaderLeft: React.FC<HeaderLeftProps> = () => {
   return (
     <>
       <IconButton rounded className="hidden md:inline-flex h-20 w-20 ">

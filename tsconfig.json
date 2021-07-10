@@ -5,7 +5,8 @@
       "@style/*": ["styles/*"],
       "@layout/*": ["layouts/*"],
       "@component/*": ["components/*"],
-      "@config/*": ["configs/*"]
+      "@config/*": ["configs/*"],
+      "@feature/*": ["features/*"]
     },
     "outDir": "build/dist",
     "module": "esnext",
