@@ -26,6 +26,13 @@ const LoginPage: React.FC<LoginPageProps> = () => {
       >
         Login
       </Button>
+      <div
+        className="text-base bg-[#3B82F6] text-white
+          py-4 px-12 absolute bottom-0 w-full"
+      >
+        <strong>Disclaimer:</strong> This is not the official Google Docs. It is
+        a redesign, built purely for educational purpose.
+      </div>
     </div>
   );
 };
