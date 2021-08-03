@@ -30,7 +30,7 @@
 
 ---
 
-![Home Screenshot](public/screenshots/home.PNG?raw=true "Template Screenshot")
+![Home Screenshot](public/screenshots/home.PNG?raw=true "Home Screenshot")
 
 ---
 
