@@ -10,6 +10,7 @@ const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
       <Head>
         <title>Google Docs Clone</title>
       </Head>
+      {/*@ts-ignore*/}
       <Component {...pageProps} />
     </SessionProvider>
   );

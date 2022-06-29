@@ -60,6 +60,7 @@ const TextEditor: React.FC<TextEditorProps> = () => {
 
   return (
     <div className="bg-[#F8F9FA] min-h-screen pb-16">
+      {/*@ts-ignore*/}
       <Editor
         //@ts-ignore
         toolbarClassName="flex sticky top-0 z-50 !justify-center
