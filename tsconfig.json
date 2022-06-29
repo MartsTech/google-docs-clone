@@ -2,17 +2,33 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@component/*": ["components/*"],
-      "@config/*": ["configs/*"],
-      "@feature/*": ["features/*"],
-      "@service/*": ["services/*"],
-      "@type/*": ["types/*"],
-      "@style/*": ["styles/*"]
+      "@component/*": [
+        "components/*"
+      ],
+      "@config/*": [
+        "configs/*"
+      ],
+      "@feature/*": [
+        "features/*"
+      ],
+      "@service/*": [
+        "services/*"
+      ],
+      "@type/*": [
+        "types/*"
+      ],
+      "@style/*": [
+        "styles/*"
+      ]
     },
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es5",
-    "lib": ["es6", "dom", "esnext.asynciterable"],
+    "lib": [
+      "es6",
+      "dom",
+      "esnext.asynciterable"
+    ],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "preserve",
@@ -30,7 +46,8 @@
     "noEmit": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "incremental": true
   },
   "exclude": [
     "node_modules",

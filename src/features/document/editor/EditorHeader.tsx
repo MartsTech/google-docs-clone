@@ -1,6 +1,6 @@
 import Button from "@component/buttons/Button";
 import Icon from "@component/icon/Icon";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
 interface EditorHeaderProps {
@@ -9,7 +9,7 @@ interface EditorHeaderProps {
 
 const EditorHeader: React.FC<EditorHeaderProps> = ({ filename }) => {
   const router = useRouter();
-  const [session] = useSession();
+  const session = useSession();
 
   return (
     <header className="flex justify-between items-center p-3 pb-1">
@@ -43,7 +43,7 @@ const EditorHeader: React.FC<EditorHeaderProps> = ({ filename }) => {
       {/*eslint-disable-next-line @next/next/no-img-element*/}
       <img
         className="rounded-full cursor-pointer h-10 w-10 ml-2"
-        src={session?.user?.image || ""}
+        src={session?.data?.user?.image || ""}
         alt="avatar"
       />
     </header>

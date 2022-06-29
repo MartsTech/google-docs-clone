@@ -1,11 +1,11 @@
 import Icon from "@component/icon/Icon";
 import IconButton from "@component/icon/IconButton";
-import { signOut, useSession } from "next-auth/client";
+import { signOut, useSession } from "next-auth/react";
 
 interface HeaderRightProps {}
 
 const HeaderRight: React.FC<HeaderRightProps> = () => {
-  const [session] = useSession();
+  const session = useSession();
 
   return (
     <>
@@ -20,7 +20,7 @@ const HeaderRight: React.FC<HeaderRightProps> = () => {
       <img
         loading="lazy"
         className="cursor-pointer h-12 w-12 rounded-full ml-2"
-        src={session?.user?.image || ""}
+        src={session?.data?.user?.image || ""}
         onClick={() => signOut()}
         alt="avatar"
       />

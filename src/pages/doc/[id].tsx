@@ -2,7 +2,7 @@ import { db } from "@config/firebase";
 import IsAuth from "@feature/auth/IsAuth";
 import EditorPage from "@feature/document/editor/EditorPage";
 import { GetServerSideProps } from "next";
-import { getSession, useSession } from "next-auth/client";
+import { getSession, useSession } from "next-auth/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useDocumentOnce } from "react-firebase-hooks/firestore";
@@ -10,7 +10,7 @@ import { useDocumentOnce } from "react-firebase-hooks/firestore";
 interface DocProps {}
 
 const Doc: React.FC<DocProps> = () => {
-  const [session] = useSession();
+  const session = useSession();
 
   const router = useRouter();
   const { id } = router.query;
@@ -18,7 +18,7 @@ const Doc: React.FC<DocProps> = () => {
   const [snapshot, loading] = useDocumentOnce(
     db
       .collection("userDocs")
-      .doc(session?.user?.email as string)
+      .doc(session?.data?.user?.email as string)
       .collection("docs")
       .doc(id as string)
   );

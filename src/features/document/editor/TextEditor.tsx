@@ -1,6 +1,6 @@
 import { db } from "@config/firebase";
 import { convertFromRaw, convertToRaw, EditorState } from "draft-js";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -18,7 +18,7 @@ interface TextEditorProps {}
 const TextEditor: React.FC<TextEditorProps> = () => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
-  const [session] = useSession();
+  const session = useSession();
 
   const router = useRouter();
   const { id } = router.query;
@@ -26,7 +26,7 @@ const TextEditor: React.FC<TextEditorProps> = () => {
   const [snapshot] = useDocumentOnce(
     db
       .collection("userDocs")
-      .doc(session?.user?.email as string)
+      .doc(session?.data?.user?.email as string)
       .collection("docs")
       .doc(id as string)
   );
@@ -45,7 +45,7 @@ const TextEditor: React.FC<TextEditorProps> = () => {
     setEditorState(editorState);
 
     db.collection("userDocs")
-      .doc(session?.user?.email as string)
+      .doc(session?.data?.user?.email as string)
       .collection("docs")
       .doc(id as string)
       .set(

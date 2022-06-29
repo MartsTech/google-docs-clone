@@ -1,7 +1,7 @@
 import Button from "@component/buttons/Button";
 import Modal from "@component/modals/Modal";
 import { createDocument } from "@service/documentServices";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import { useState } from "react";
 
 interface CreateDocumentProps {
@@ -14,10 +14,10 @@ const CreateDocument: React.FC<CreateDocumentProps> = ({
   close,
 }) => {
   const [input, setInput] = useState("");
-  const [session] = useSession();
+  const session = useSession();
 
   const create = () => {
-    createDocument(input, session?.user?.email || "");
+    createDocument(input, session?.data?.user?.email || "");
     setInput("");
     close();
   };

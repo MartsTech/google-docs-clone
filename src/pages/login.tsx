@@ -1,7 +1,7 @@
 import IsNotAuth from "features/auth/IsNotAuth";
 import LoginPage from "features/auth/LoginPage";
 import { GetServerSideProps } from "next";
-import { getSession } from "next-auth/client";
+import { getSession } from "next-auth/react";
 import Head from "next/head";
 
 interface LoginProps {}

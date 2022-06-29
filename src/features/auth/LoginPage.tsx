@@ -1,5 +1,5 @@
 import Button from "@component/buttons/Button";
-import { signIn } from "next-auth/client";
+import { signIn } from "next-auth/react";
 import Image from "next/image";
 
 interface LoginPageProps {}

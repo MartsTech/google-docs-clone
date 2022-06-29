@@ -1,7 +1,7 @@
 import IsAuth from "@feature/auth/IsAuth";
 import HomePage from "@feature/home/HomePage";
 import { GetServerSideProps } from "next";
-import { getSession } from "next-auth/client";
+import { getSession } from "next-auth/react";
 
 interface HomeProps {}
 

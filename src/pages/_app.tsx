@@ -1,17 +1,17 @@
 import "@material-tailwind/react/tailwind.css";
 import "@style/globals.css";
-import { Provider } from "next-auth/client";
-import { AppProps } from "next/app";
+import { SessionProvider } from "next-auth/react";
+import type { AppProps } from "next/app";
 import Head from "next/head";
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
   return (
-    <Provider session={pageProps.session}>
+    <SessionProvider session={session}>
       <Head>
         <title>Google Docs Clone</title>
       </Head>
       <Component {...pageProps} />
-    </Provider>
+    </SessionProvider>
   );
 };
 
